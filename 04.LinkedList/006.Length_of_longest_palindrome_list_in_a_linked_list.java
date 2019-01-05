@@ -1,4 +1,105 @@
-program 1:
+//Length of longest palindrome list in a linked list using O(1) extra space
+//Time Complexity : O(n^2)
+class LinkedList{
+
+    static Node head;
+    static class Node{
+       int data;
+       Node next;
+    
+       Node(int d){
+         data=d;
+         next =null;
+       }
+    }
+   public static int max_n(int x,int y){
+  
+          if(x>y)
+            return x;
+          else 
+            return y;
+       }
+
+
+   public static boolean bool(Node node){
+    if(node!=null)
+     return true;
+    else
+      return false;
+   }
+
+// function for counting the common elements
+   public static int countCommon(Node a,Node b){
+     int count =0;
+     // loop to count coomon in the list starting  from node a and b 
+     for(;bool(a) &&bool(b);a=a.next,b=b.next){
+          
+      // increment the count for same values
+       if(a.data==b.data)
+         count++;
+       else
+          break;
+
+     }
+     return count;
+   }
+     
+   //Returns length of the longest palindrome  sublist in given list   
+   public static int maxPalindrome(Node node){
+      int result=0;
+      Node prev=null,curr=node;
+        
+      // loop till the end of the linked list 
+      while(curr!=null){
+           
+        // The sublist from head to current reversed.      
+          Node next=curr.next;
+          curr.next=prev;
+
+           
+          // check for odd length palindrome  by finding longest common list elements 
+          // beginning from prev and from next (We  exclude curr)  
+          result=max_n(result,2*countCommon(prev,next)+1);
+           
+          // check for even length palindrome by finding longest common list elements 
+          // beginning from curr and from next 
+          result=max_n(result,2*countCommon(curr,next));
+ 
+       // update prev and curr for next iteration 
+       prev=curr;
+       curr=next;
+
+     }
+    return result;
+   }
+
+   void printList(Node node){
+        while(node!=null){
+        System.out.print(node.data+" ");
+        node=node.next;
+        }
+     }
+     
+
+
+   public static void main(String args[]){
+
+    LinkedList list =new LinkedList();
+    
+
+        list.head = new Node(85); 
+        list.head.next = new Node(15); 
+        list.head.next.next = new Node(4); 
+        list.head.next.next.next = new Node(20); 
+          
+        System.out.println("Given Linked list"); 
+        list.printList(head); 
+        System.out.println("Length of longest plaindrome is : "+  maxPalindrome(head));
+   } 
+
+}
+
+/* //program 2:
 //Length of longest palindrome list in a linked list using array list in java  storing the data in an array then find the palindrome.  
 import java.util.*;
 class LinkedList{
@@ -89,4 +190,4 @@ class LinkedList{
    }
         
    
-}
+}*/
