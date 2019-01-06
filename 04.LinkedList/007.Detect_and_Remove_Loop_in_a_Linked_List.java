@@ -75,3 +75,19 @@ class LinkedList {
         list.printList(head); 
     } 
 } 
+/*int removeTheLoop(Node node) {
+        //add code here.
+    Node fast = node;
+    Node slow = node;
+     
+     while(fast != null && slow != null && fast.next != null){
+         slow = slow.next;
+         fast = fast.next.next;
+         
+         if(slow == fast){
+             fast.next = null;
+             return 1;
+         }
+
+
+*/
