@@ -1,6 +1,32 @@
 // Java program to extract leaf nodes from binary tree 
 // using double linked list 
+   /*
+   Let the following be input binary tree
+        1
+     /     \
+    2       3
+   / \       \
+  4   5       6
+ / \         / \
+7   8       9   10
+
+
+Output:
+Doubly Linked List
+7<->8<->5<->9<->10
+
+Modified Tree:
+        1
+     /     \
+    2       3
+   /         \
+  4           6
+
    
+   Time Complexity: O(n), the solution does a single traversal of given Binary Tree.
+   
+   */
+
 // A binay tree node 
 class Node  
 { 
