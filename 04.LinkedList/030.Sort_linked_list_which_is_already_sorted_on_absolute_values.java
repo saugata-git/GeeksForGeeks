@@ -1,3 +1,4 @@
+//An efficient solution can work in O(n) time. 
 class SortList{
 
     static Node node;
