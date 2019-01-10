@@ -13,6 +13,19 @@ class LinkedList {
             next = null; 
         } 
     } 
+ 
+    void countNodes(Node n){
+    int res = 1; 
+    Node temp = n; 
+   while (temp.next != n) 
+   { 
+      res++; 
+      temp = temp.next; 
+   } 
+   System.out.println("Length of Loop : "+ res); 
+    
+    }
+ 
   
     // Function that detects loop in the list 
     void detectAndRemoveLoop(Node node) { 
@@ -31,8 +44,9 @@ class LinkedList {
   
         // Search for loop using slow and fast pointers 
         while (fast != null && fast.next != null) { 
-            if (slow == fast)  
-                break; 
+            if (slow == fast){
+                countNodes(slow);
+                break; }
               
             slow = slow.next; 
             fast = fast.next.next; 
