@@ -75,7 +75,7 @@ static void removeDuplicates(Node start)
 } 
 
 // Function two Multiply two polynomial Numbers 
-static Node multiply(Node poly1, Node poly2, 
+static Node addition(Node poly1, Node poly2, 
 			Node poly3) 
 { 
 
@@ -145,7 +145,7 @@ public static void main(String args[])
 	printList(poly2); 
 
 	// calling multiply function 
-	poly3 = multiply(poly1, poly2, poly3); 
+	poly3 = addition(poly1, poly2, poly3); 
 
 	// Displaying Resultant Polynomial 
 	System.out.print( "Resultant Polynomial:- "); 
