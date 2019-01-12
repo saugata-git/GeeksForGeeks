@@ -1,3 +1,6 @@
+//Time Complexity is O(n)
+//Space Complexity is O(1)
+
 public class BST
 {
    static class Node
