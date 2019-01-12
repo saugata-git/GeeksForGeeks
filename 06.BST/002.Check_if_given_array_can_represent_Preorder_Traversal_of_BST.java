@@ -1,6 +1,7 @@
 // Java program for an efficient solution to check if 
 // a given array can represent Preorder traversal of 
 // a Binary Search Tree 
+An Efficient Solution can solve this problem in O(n) time.
 import java.util.Stack; 
   
 class BST { 
