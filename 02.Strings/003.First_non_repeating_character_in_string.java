@@ -48,10 +48,39 @@ class FNRC{
 }
 // queue based approach
 /*
-public static void main(String[] args) 
+import java.util.*;
+
+
+class nrcis{
+      final static int MAX_CHAR=26;
+      static void fnr(String str){
+        int [] charCount=new int [MAX_CHAR];
+        Queue<Character>q=new LinkedList<Character>();
+        for(int i=0;i<str.length();i++){
+          char ch=str.charAt(i);
+          q.add(ch);
+          charCount[ch-'a']++;
+
+          while(!q.isEmpty()){
+            if(charCount[q.peek()-'a']>1)
+               q.remove();
+            else{
+              System.out.print(q.peek()+" ");
+              break;
+            }
+          }
+          if(q.isEmpty())
+              System.out.print(-1+" ");
+        }
+       System.out.println();
+      }
+     public static void main(String[] args) 
 	{ 
 		String str = "aabc"; 
-		firstNonRepeating(str); 
+		fnr(str); 
 	} 
+
+
+}
 
 */
