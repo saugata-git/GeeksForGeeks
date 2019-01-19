@@ -46,3 +46,12 @@ class FNRC{
    }
 
 }
+// queue based approach
+/*
+public static void main(String[] args) 
+	{ 
+		String str = "aabc"; 
+		firstNonRepeating(str); 
+	} 
+
+*/
