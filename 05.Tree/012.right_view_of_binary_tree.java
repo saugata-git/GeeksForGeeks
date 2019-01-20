@@ -1,5 +1,5 @@
 // Java program to print right view of binary tree 
-
+//Time Complexity: The function does a simple traversal of the tree, so the complexity is O(n).
 // A binary tree node 
 class Node { 
 
