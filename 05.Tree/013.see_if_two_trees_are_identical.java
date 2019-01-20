@@ -1,5 +1,9 @@
 // Java program to see if two trees are identical 
-
+/*
+Time Complexity:
+Complexity of the identicalTree() will be according to the tree with lesser number of nodes.
+Let number of nodes in two trees be m and n then complexity of sameTree() is O(m) where m < n.
+*/
 
 class Node 
 { 
