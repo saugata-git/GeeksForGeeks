@@ -1,4 +1,4 @@
-
+//Time Complexity: O(n) where n is the number of nodes in binary tree.
 class Node { 
 	int data; 
 	Node left, right; 
