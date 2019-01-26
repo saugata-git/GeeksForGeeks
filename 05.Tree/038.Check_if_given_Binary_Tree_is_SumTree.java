@@ -1,3 +1,5 @@
+//T(n)=O(n)
+
 class Node 
 { 
 	int data; 
