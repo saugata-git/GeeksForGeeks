@@ -13,7 +13,7 @@ class BinaryTree
 
   static void findPostOrderUtil(int pre[],int n,int minval,int maxval,INT preIndex){
     
-    if(preIndex.data==null)
+    if(preIndex.data==n)
      return;
 
     if(pre[preIndex.data]<minval||pre[preIndex.data]>maxval){
