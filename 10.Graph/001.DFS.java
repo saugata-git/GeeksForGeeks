@@ -31,11 +31,10 @@ public class Graph
            }
         }
 
-        void DFS(){
+        void DFS(int v){
          boolean visited[]=new boolean[V];
-         for(int i=0;i<V;++i)
-          if(visited[i]==false)
-             DFSUtil(i,visited);
+         
+             DFSUtil(v,visited);
         }
 
         public static void main(String args[]){ 
@@ -48,8 +47,11 @@ public class Graph
            g.addEdge(2, 3); 
            g.addEdge(3, 3); 
   
-        System.out.println("Following is Depth First Traversal"); 
-        g.DFS(); 
+         System.out.println("Following is Depth First Traversal "+ 
+                           "(starting from vertex 2)"); 
+  
+        g.DFS(2); 
+
        } 
 } 
 
