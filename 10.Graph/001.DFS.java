@@ -52,3 +52,15 @@ public class Graph
         g.DFS(); 
        } 
 } 
+
+/*
+public void DFS(int v, LinkedList<Integer>[] adj, boolean[] visited)
+    {
+    if(!visited[v]){
+        System.out.print(v + " ");
+        visited[v] = true;
+        for(int w : adj[v]){
+            DFS(w, adj, visited);
+        }
+    }
+*/
