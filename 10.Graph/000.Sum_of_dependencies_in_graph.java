@@ -1,4 +1,5 @@
 // Java program to find the sum of dependencies 
+//Time complexity : O(V) where V is number of vertices in graph.
 import java.io.*;
 import java.util.Vector; 
 
