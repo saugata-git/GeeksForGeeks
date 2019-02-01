@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
-
+//Time Complexity: The program does a simple DFS Traversal of graph and graph is represented using adjacency list.
+//So the time complexity is O(V+E)
 class Graph{
 
      private int V;
