@@ -38,7 +38,7 @@ class Graph {
                     return true;
               }
             }
-         recStack[v]=false;
+         recStack[v]=false;//remove the vertex from recursion stack
          return false; 
 
         }
