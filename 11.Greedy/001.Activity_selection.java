@@ -18,7 +18,7 @@ class SortByFinish implements Comparator<Activity>{
 }
 
 
-class GFG {
+class Driver{
 	public static void main (String[] args) {
 	  Scanner sc = new Scanner(System.in);
       int t=sc.nextInt();
@@ -30,11 +30,11 @@ class GFG {
          for(int i=0;i<n;i++){
           s[i]=sc.nextInt();
          }
-         System.out.println();
+        
          for(int i=0;i<n;i++){
           f[i]=sc.nextInt();
          }
-         System.out.println();
+         
         
          Activity []a= new Activity[n];
          
@@ -54,5 +54,5 @@ class GFG {
         System.out.println(count);
         
       }
-	}
+   }
 }
