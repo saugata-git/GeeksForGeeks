@@ -33,12 +33,12 @@ class Driver{
           s[i]=sc.nextInt();
         }
         for(int i=0;i<n;i++){
-          s[i]=sc.nextInt();
+          f[i]=sc.nextInt();
         }
         
         Meeting []m= new Meeting[n];
         for(int i=0;i<n;i++){
-          m[i]= new Meeting(i+1,s[i],s[i]);
+          m[i]= new Meeting(i+1,s[i],f[i]);
         }  
         
         Arrays.sort(m, new SortByFinish());
