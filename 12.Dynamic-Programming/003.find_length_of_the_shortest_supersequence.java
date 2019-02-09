@@ -1,5 +1,7 @@
 // A dynamic programming based Java program to 
 // find length of the shortest supersequence 
+// Time complexity of this solution is O(mn).
+
 class dp{ 
 	static int superSeq(String X, String Y,int m, int n) 
 	{ 
