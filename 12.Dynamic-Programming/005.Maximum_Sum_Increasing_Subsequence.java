@@ -1,5 +1,5 @@
 //Maximum Sum Increasing Subsequence
-Time Complexity: O(n^2)
+//Time Complexity: O(n^2)
 class dp{
  
     static int maxSumIS(int arr[],int n){
