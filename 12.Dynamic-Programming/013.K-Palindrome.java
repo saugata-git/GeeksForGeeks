@@ -21,14 +21,31 @@ class dp{
        }
      return L[m][n];
     }
+    
+    /*
+    public static String reverse(String s) {
+
+        String reversedString = "";
+        for(int i=s.length(); i>0; i--) {
+            reversedString += s.charAt(i-1);
+        }   
+
+        return reversedString;
+    }
+     */
 
    static boolean isKPal(String str,int k){
         int n=str.length();
-
+        
         StringBuilder revstr = new StringBuilder(str); 
         revstr=revstr.reverse();
-
         int lps=lcs(str,revstr.toString(),n,n);
+       
+       /*String revstr;
+        revstr=reverse(str);
+        int lps=lcs(str,revstr,n,n);
+        */
+      
         return (n-lps<=k);
    }
 
