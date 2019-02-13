@@ -14,7 +14,7 @@ class knapsack{
           else if(wt[i-1]<=w)
              k[i][w]=max(val[i-1]+k[i-1][w-wt[i-1]],k[i-1][w]);
          else
-           k[i][w]=k[i][w];
+           k[i][w]=k[i-1][w];
       }
    }
   return k[n][W];
