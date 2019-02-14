@@ -31,9 +31,9 @@ public class dp{
                // remove common palinrome substrings (-dp[i+1][j-1]) 
                
                if(p[i][j]==true)
-                  dp[i][j]=dp[i][j-1]+dp[i+1][j]+1-dp[i+1][j-1];
+                   dp[i][j] = dp[i][j-1] + dp[i+1][j] + 1 - dp[i+1][j-1];
                else
-                  dp[i][j]=dp[i][j-1]+dp[i+1][j]-dp[i+1][j-1];
+                   dp[i][j] = dp[i][j-1] + dp[i+1][j] - dp[i+1][j-1];
              }
          }
          return dp[0][n-1];
