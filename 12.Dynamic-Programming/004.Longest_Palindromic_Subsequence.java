@@ -1,5 +1,5 @@
 //Longest Palindromic subsequence
-
+//T(n)=O(m*n)
 class dp{
  
     static int max(int x,int y){
