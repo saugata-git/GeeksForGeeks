@@ -41,6 +41,38 @@ class egg{
         System.out.println("Minimum number of trials in worst case with "+n+"  eggs and "+k+ " floors is "+eggDrop(n,k));    
     } 
 }
+ /*
+ 
+ //nlogk  solution
+ class egg{
+
+  static int bicoff(int x,int n,int k){
+    int sum=0,term=1;
+    for(int i=1;i<=n && sum<k;i++){
+       term*= x-i+1;
+       term/=i;
+       sum+=term; 
+   }
+   return sum;
+  }
+ static int minTrials(int n,int k){
+   int low=1,high=k;
+    while(low<high){
+     int mid=(low+high)/2;
+     if(bicoff(mid,n,k)<k)
+         low=mid+1;
+     else
+        high=mid;
+    }
+  return low;
+ }
   
+ public static void main(String args[]){
+
+  System.out.println(minTrials(2,36));
+ }
+}
+
+ */
 
 
