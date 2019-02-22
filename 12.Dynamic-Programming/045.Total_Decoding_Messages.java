@@ -2,11 +2,9 @@
 // implementation to count decodings 
 import java.io.*; 
 
-class GFG 
-{ 
+class dp{ 
 
-static int countDecodingDP(char digits[], int n) 
-{ 
+static int countDecodingDP(char digits[], int n) { 
 	// A table to store results of subproblems 
 	int count[] = new int[n + 1]; 
 	count[0] = 1; 
