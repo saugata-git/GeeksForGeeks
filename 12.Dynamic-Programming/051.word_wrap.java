@@ -1,3 +1,6 @@
+
+//Time Complexity: O(n^2)
+//Auxiliary Space: O(n^2) The auxiliary space used in the above program cane 
 import java.util.*;
 
 public class WordWrap{
