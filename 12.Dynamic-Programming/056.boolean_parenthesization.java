@@ -1,3 +1,5 @@
+
+//BOTTOM UP 
 Time Complexity: O(n^3)
 Auxiliary Space: O(n^2)
 class boolparen{
@@ -56,3 +58,5 @@ class boolparen{
         System.out.println(countParenth(symbols,operators, n)); 
     } 
 } 
+// FOR TOP DOWWN SOLUTION 
+//https://www.youtube.com/watch?v=qb-syED2hFQ&list=PLQ9cQ3JqeqU_GzOU0aPVs4UBprzmFjnSI&index=5
