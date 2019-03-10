@@ -1,5 +1,8 @@
+//T(n)=O(n^2*2^n)
+//S(n)=O(n*2^n)
+
 import java.util.*;
-public class tsp1{
+public class tsp{
 
    public static int tsp(int dist[][],int mask,int pos){ 
 
