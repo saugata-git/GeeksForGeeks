@@ -1,4 +1,4 @@
-//T(n)=O(2^n*n)
+//T(n)<O(2^n*n)// we cants exactly tell cause it uses back track
 //S(n)=O(n^2)
 public class RatMaze{
 
