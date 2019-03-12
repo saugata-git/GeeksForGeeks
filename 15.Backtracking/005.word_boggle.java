@@ -1,6 +1,18 @@
 // DFS/TRIE/BACKTRACKING
 //.Using Trie, we can search the key in O(M) time.where M is maximum string length
-//T(N)=O(M*N^2)//N^2 FOR EVERY EVEMENT IN MATRIX
+/*
+we are already looking at n^2*2^(n-1). n^2 because the grid is n by n and so for a 4 by 4 grid there are 16 possible 
+starting characters. And 2^(n-1) because of the powerset led by each starting character. 
+But we can already see the time complexity with that first pattern: Big-Omega(2^n) which is exponential.
+
+
+Building a prefix tree our of the dictionary words is O(W * L), 
+where W is the number of words in the dictionary and L is the maximum length of a word in the dictionary.
+Searching the board will be of the same order as the dictionary since we are not really searching words that are not 
+in the dictionary. But in reality it will be more work than that as we still need to backtrack along the
+board to construct new words until we can consult the dictionary prefix tree to know whether it exists or not.
+
+*/
 class Boggle{
 
    static final int SIZE=26;
