@@ -30,6 +30,7 @@ class combinationSum{
 
    public static void main(String args[]){ 
           int arr[]={2,6,3,7};
+           Arrays.sort(arr);
           System.out.println(cSum(arr,7));
    }
 
