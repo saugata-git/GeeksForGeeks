@@ -1,5 +1,55 @@
 import java.util.*;
+//Bit-masking
+import java.util.*;
+class a{
+   public static void main(String args[]){
+       int n=5;
+       ArrayList<String> list= new ArrayList<>();
+       ArrayList<String> list1= new ArrayList<>();
+       for(int i=0;i<(int)(1<<n);i++){
+            String str="";
+            for(int j=0;j<n;j++){
+               if((i&(1<<j))>0){
+                 str+=(j+1);
+               }
+            }
+           
+            list.add(str);
+       }
+      
+         //Lexicographical sort
+          list1.add(list.get(0));
+          for(int j=0;j<n;j++){
+            for(int i=1;i<(int)(1<<n);i++){
+                int in=(list.get(i).charAt(0))- '0';
 
+                   if(in==j+1){
+                     list1.add(list.get(i));
+                   }
+            }
+          }
+      
+
+
+   
+              for(String str : list1){
+                  System.out.print("(");
+                  for(int i=0;i<str.length();i++){
+                     if(i!=str.length()-1){
+                        System.out.print(str.charAt(i)+" ");
+                     }
+                     else{
+                       System.out.print(str.charAt(i));
+                     }
+                  }
+                  System.out.print(")");
+              }
+              System.out.println();
+   }
+  
+}
+
+/*recursive sol
 class Subsets{
 
    public static void main(String args[]){
@@ -60,3 +110,5 @@ class Subsets{
        return mr;
    }
 }
+
+*/
