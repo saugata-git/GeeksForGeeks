@@ -1,3 +1,8 @@
+//This algorithm has time complexity O((n+k)!) where n is the size of candidates, 
+//and k is the max repeated times for each candidates
+
+space complexity O(m) where m is the size of array for the solution.
+
 import java.util.*;
 class combinationSum{
 
