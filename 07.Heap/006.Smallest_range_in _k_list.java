@@ -1,3 +1,5 @@
+
+//T(n)=O(n*log(k)) where n is the number of elements in list and k is the total number of list
 import java.util.*;
 
 class Element{
