@@ -1,3 +1,53 @@
+/*
+//Representation of Segment trees
+1. Leaf Nodes are the elements of the input array.
+2. Each internal node represents minimum of all leaves under it.
+
+An array representation of tree is used to represent Segment Trees.
+For each node at index i, the left child is at index 2*i+1, right child at 2*i+2 and the parent is at (i-1)/2
+
+
+How does above segment tree look in memory?
+Like Heap, segment tree is also represented as array. 
+The difference here is, it is not a complete binary tree.
+It is rather a full binary tree (every node has 0 or 2 children) and
+all levels are filled except possibly the last level. 
+Unlike Heap, the last level may have gaps between nodes. Below are values in segment tree array for the above diagram.
+
+Below is memory representation of segment tree for input array {1, 3, 5, 7, 9, 11}
+st[] = {36, 9, 27, 4, 5, 16, 11, 1, 3, DUMMY, DUMMY, 7, 9, DUMMY, DUMMY}
+
+The dummy values are never accessed and have no use. 
+This is some wastage of space due to simple array representation. 
+We may optimize this wastage using some clever implementations, but code for sum and update becomes more complex.
+
+Construction of Segment Tree from given array
+We start with a segment arr[0 . . . n-1]. and every time we divide the current segment into two halves
+(if it has not yet become a segment of length 1), and then call the same procedure on both halves,
+and for each such segment, we store the sum in the corresponding node.
+All levels of the constructed segment tree will be completely filled except the last level. 
+Also, the tree will be a Full Binary Tree because we always divide segments in two halves at every level.
+Since the constructed tree is always a full binary tree with n leaves, there will be n-1 internal nodes.
+So total number of nodes will be 2*n – 1. Note that this does not include dummy nodes.
+
+What is total size of array representing segment tree?
+If n is a power of 2, then there are no dummy nodes. So size of segment tree is 2n-1 (n leaf nodes and n-1) internal nodes.
+If n is not a power of 2, then size of tree will be 2*x – 1 where x is smallest power of 2 greater than n. 
+For example, when n = 10, then size of array representing segment tree is 2*16-1 = 31.
+An alternate explanation for size is based on heignt. Height of the segment tree will be log2(n). 
+Since the tree is represented using array and relation between parent and child indexes must be maintained,
+size of memory allocated for segment tree will be 2*2^(log2(n))-1.
+
+Time Complexity:
+Time Complexity for tree construction is O(n). 
+There are total 2n-1 nodes, and value of every node is calculated only once in tree construction.
+Time complexity to query is O(Logn). 
+To query a sum, we process at most four nodes at every level and number of levels is O(Logn).
+The time complexity of update is also O(Logn). 
+To update a leaf value, we process one node at every level and number of levels is O(Logn).
+*/
+
+
 import java.util.*;
 
 class SegmentTree{
