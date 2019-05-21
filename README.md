@@ -1,1 +1,1 @@
-This repository contains solutions of several importatant coding problems & DataStructures & Algorithms in java.
+This repository contains solutions of several importatant coding problems of GeeksforGeeks in java.
