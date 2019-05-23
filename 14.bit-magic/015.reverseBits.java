@@ -1,6 +1,30 @@
 class reverseBits{
-
-    /*O(n) solution
+   /*
+   Best solution
+   public long reverse(long a) {
+      long rev=0;
+      for(int i=0;i<32;i++){
+        rev<<=1;
+        if((a & (1<<i))!=0){ 
+           rev|=1;
+        }  
+    }
+    return rev;    
+  }
+  public static long reverse(long a) {
+        long result = 0;
+        int i=31;
+        while(a>0){
+            result+=(a%2)*Math.pow(2,i);
+            i--;
+            a=a/2;
+        }
+        return result;
+ }	
+ */
+	
+	 
+    /*O(n) solution  return signed bit
     public static int reverseBits(int n) {
 	for (int i = 0; i < 16; i++) {
 		n = swapBits(n, i, 32 - i - 1);
